@@ -1,7 +1,4 @@
-const int analogPin(A0);
-const int minSensor;
-int sensorValue;
-const float percentage;
+const int PIN = A0;
 void setup() {
   pinMode(10, OUTPUT);
   pinMode(9, OUTPUT);
@@ -15,16 +12,65 @@ void setup() {
   pinMode(1, OUTPUT);
   Serial.begin(9600);
   
-  sensorValue = analogRead(A0);
 
-  percentage =  = map(sensorValue, 0, 1023, 0, 100);
+
+
 }
 
 void loop() 
 {
-  //Serial.println(float(sensorValue/1023 * 100));
+  int rawvalue = analogRead(PIN);
+  int percentage = map(rawvalue, 0, 1023, 0, 100);
   Serial.println(percentage);
-  delay(10);
+  if (percentage > 10 && percentage <20)
+    {
+      digitalWrite(2, HIGH);
+    }
+  else 
+  {
+    digitalWrite(2,LOW);
+  }
+    if (percentage > 10 && percentage <20)
+    {
+      digitalWrite(2, HIGH);
+    }
+  else 
+  {
+    digitalWrite(2,LOW);
+  }
+    if (percentage > 30 && percentage <40)
+    {
+      digitalWrite(2, HIGH);
+    }
+  else 
+  {
+    digitalWrite(2,LOW);
+  }
+    if (percentage > 10 && percentage <20)
+    {
+      digitalWrite(2, HIGH);
+    }
+  else 
+  {
+    digitalWrite(2,LOW);
+  }
+    if (percentage > 10 && percentage <20)
+    {
+      digitalWrite(2, HIGH);
+    }
+  else 
+  {
+    digitalWrite(2,LOW);
+  }
+    if (percentage > 10 && percentage <20)
+    {
+      digitalWrite(2, HIGH);
+    }
+  else 
+  {
+    digitalWrite(2,LOW);
+  }
+  delay(100);
 
 
 
